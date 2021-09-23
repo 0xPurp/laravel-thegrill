@@ -61,19 +61,35 @@
                         <li><a href="#about" class="page-scroll">About Us</a></li>  
                         <li><a href="#about" class="page-scroll">Specials</a></li>    
                         <li><a href="#the-menu" class="page-scroll">Our Menu</a></li>      
-                        <li><a href="#about" class="page-scroll">Book a Table</a></li>                 
+                        <li><a href="#about" class="page-scroll">Book a Table</a></li>  
+                                      
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Extras <span class="pe-7s-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="404.html">404</a></li>
                             </ul>
                         </li>
+                        
                         <li><a href="#search"><i class="fa fa-search"></i></a></li>
+                        <li>@if (Route::has('login'))
+                            <div class=" fixed top-0 right-0 px-6 py-4 sm:block">
+                                @auth
+                                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+            
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                    @endif
+                                @endauth
+                            </div>
+                        @endif</li>
                     </ul>
 
                 </div>
                 <!-- /.navbar-collapse -->         
 
+                
             </div>
             <!-- /.container-fluid -->
         </nav>
