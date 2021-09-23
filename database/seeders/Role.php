@@ -24,6 +24,9 @@ class Role extends Seeder
             ],
             [
                 "role" => "Editor"
+            ],
+            [
+                "role" => "Membre"
             ]
             ]);
     }
