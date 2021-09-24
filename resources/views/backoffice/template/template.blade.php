@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/tailwind.css')}}">
         <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-        <link rel="stylesheet" href="{{asset('style.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <!-- Boxicons CDN Link -->
         
     <script src="{{asset('js/tailwind.js')}}"></script>
@@ -22,5 +22,7 @@
     </section>
 
 
+
 </body>
 </html>
+

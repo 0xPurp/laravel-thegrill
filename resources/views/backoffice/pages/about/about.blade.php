@@ -2,6 +2,5 @@
 
 @section('back')
     
-<h1> Bienvenue dans le dashboard</h1>   
+<h1> About</h1>   
 @endsection
-

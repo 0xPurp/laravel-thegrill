@@ -24,6 +24,29 @@ Route::get('/dashboard1', function () {
 });
 
 
+Route::get('/about', function () {
+    return view('backoffice.pages.about.about');
+});
+
+Route::get('/chef', function () {
+    return view('backoffice.pages.chef.chef');
+});
+
+Route::get('/client', function () {
+    return view('backoffice.pages.client.client');
+});
+Route::get('/header', function () {
+    return view('backoffice.pages.header.header');
+});
+
+Route::get('/home', function () {
+    return view('backoffice.pages.home.home');
+});
+Route::get('/users', function () {
+    return view('backoffice.pages.users.users');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
