@@ -18,7 +18,11 @@ class DatabaseSeeder extends Seeder
             Users::class,
             AboutSeeder::class,
             ChefsSeeder::class,
-            CustomersSeeder::class
+            CustomersSeeder::class,
+            EventsSeeder::class,
+            FooterSeeder::class,
+            HomePageSeeder::class,
+            MenuSeeder::class
         ]);
     }
 }
