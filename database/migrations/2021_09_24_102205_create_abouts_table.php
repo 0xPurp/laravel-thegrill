@@ -21,12 +21,12 @@ class CreateAboutsTable extends Migration
             $table->string('descriptiongauche');
             $table->string('notesgauche');
             $table->string('titredroite');
-            $table->string('descriptiondroite');
+            $table->text('descriptiondroite');
             $table->string('notesdroite');
             $table->string('titrebook');
-            $table->string('descriptionbook');
+            $table->text('descriptionbook');
             $table->string('titremenu');
-            $table->string('descriptionmenu');
+            $table->text('descriptionmenu');
             $table->timestamps();
         });
     }
