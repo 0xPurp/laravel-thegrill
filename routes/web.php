@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ChefController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,31 +28,35 @@ Route::get('/dashboard1', function () {
 });
 
 
-Route::get('/about', function () {
-    return view('backoffice.pages.about.about');
-});
 
-Route::get('/chef', function () {
-    return view('backoffice.pages.chef.chef');
-});
 
-Route::get('/client', function () {
-    return view('backoffice.pages.client.client');
-});
+
+
+
 Route::get('/header', function () {
     return view('backoffice.pages.header.header');
 });
 
-Route::get('/home', function () {
+Route::get('/dhome', function () {
     return view('backoffice.pages.home.home');
 });
-Route::get('/users', function () {
-    return view('backoffice.pages.users.users');
-});
+
 
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+/* Route::get('/user', function () {
+    return view('backoffice.pages.users.users');
+})->middleware(['auth'])->name('users'); */
+
 require __DIR__.'/auth.php';
+
+Route::resource('/users', UserController::class);
+
+Route::resource('/chef', ChefController::class);
+
+Route::resource('/client', ClientController::class);
+
+Route::resource('/about', AboutController::class);

@@ -18,15 +18,24 @@ class ChefsSeeder extends Seeder
             [
                 "titre" => "OUR ACCLAIMED CHEFS",
                 "sous-titre" => "dedicated to excellence.",
-                "photochef1" => "assets/img/team/1.jpg",
-                "namechef1" => "JOHN DOE",
-                "photochef2" => "assets/img/team/2.jpg",
-                "namechef2" => "BARRY SCOTT",
-                "photochef3" => "assets/img/team/3.jpg",
-                "namechef3" => "TOM SMOOTH",
-                "photochef4" => "assets/img/team/4.jpg",
-                "namechef4" => "HARVEY WALLACE"
-            ]
+                "photo_chef" => "assets/img/team/1.jpg",
+                "nom_chef" => "JOHN DOE"],
+               
+                ["titre" => "OUR ACCLAIMED CHEFS",
+                "sous-titre" => "dedicated to excellence.",
+                "photo_chef" => "assets/img/team/2.jpg",
+                "nom_chef" => "BARRY SCOTT"
+                ],
+                ["titre" => "OUR ACCLAIMED CHEFS",
+                "sous-titre" => "dedicated to excellence.",
+                "photo_chef" => "assets/img/team/3.jpg",
+                "nom_chef" => "TOM SMOOTH"
+                ],
+                ["titre" => "OUR ACCLAIMED CHEFS",
+                "sous-titre" => "dedicated to excellence.",
+                "photo_chef" => "assets/img/team/4.jpg",
+                "nom_chef" => "HARVEY WALLACE"]
+            
             ]);
     }
 }

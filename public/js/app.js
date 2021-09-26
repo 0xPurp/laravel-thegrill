@@ -4049,10 +4049,7 @@
   * CSRF token as a header based on the value of the "XSRF" token cookie.
   */
  
- <<<<<<< HEAD
  
- =======
- >>>>>>> main
  window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
  window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  /**
@@ -34527,7 +34524,6 @@
       * @static
       * @memberOf _
       * @since 4.0.0
- <<<<<<< HEAD
       * @category String
       * @param {string} [string=''] The string to truncate.
       * @param {Object} [options={}] The options object.
@@ -34665,85 +34661,6 @@
  
      /**
       * Converts the first character of `string` to upper case.
- =======
-      * @category Lang
-      * @param {*} value The value to check.
-      * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-      * @example
-      *
-      * _.isObjectLike({});
-      * // => true
-      *
-      * _.isObjectLike([1, 2, 3]);
-      * // => true
-      *
-      * _.isObjectLike(_.noop);
-      * // => false
-      *
-      * _.isObjectLike(null);
-      * // => false
-      */
-     function isObjectLike(value) {
-       return value != null && typeof value == 'object';
-     }
- 
-     /**
-      * Checks if `value` is classified as a `Map` object.
-      *
-      * @static
-      * @memberOf _
-      * @since 4.3.0
-      * @category Lang
-      * @param {*} value The value to check.
-      * @returns {boolean} Returns `true` if `value` is a map, else `false`.
-      * @example
-      *
-      * _.isMap(new Map);
-      * // => true
-      *
-      * _.isMap(new WeakMap);
-      * // => false
-      */
-     var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
- 
-     /**
-      * Performs a partial deep comparison between `object` and `source` to
-      * determine if `object` contains equivalent property values.
-      *
-      * **Note:** This method is equivalent to `_.matches` when `source` is
-      * partially applied.
-      *
-      * Partial comparisons will match empty array and empty object `source`
-      * values against any array or object value, respectively. See `_.isEqual`
-      * for a list of supported value comparisons.
-      *
-      * @static
-      * @memberOf _
-      * @since 3.0.0
-      * @category Lang
-      * @param {Object} object The object to inspect.
-      * @param {Object} source The object of property values to match.
-      * @returns {boolean} Returns `true` if `object` is a match, else `false`.
-      * @example
-      *
-      * var object = { 'a': 1, 'b': 2 };
-      *
-      * _.isMatch(object, { 'b': 2 });
-      * // => true
-      *
-      * _.isMatch(object, { 'b': 1 });
-      * // => false
-      */
-     function isMatch(object, source) {
-       return object === source || baseIsMatch(object, source, getMatchData(source));
-     }
- 
-     /**
-      * This method is like `_.isMatch` except that it accepts `customizer` which
-      * is invoked to compare values. If `customizer` returns `undefined`, comparisons
-      * are handled by the method instead. The `customizer` is invoked with five
-      * arguments: (objValue, srcValue, index|key, object, source).
- >>>>>>> main
       *
       * @static
       * @memberOf _
@@ -35978,7 +35895,6 @@
       * @static
       * @memberOf _
       * @since 4.0.0
- <<<<<<< HEAD
       * @category Math
       * @param {Array} array The array to iterate over.
       * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
@@ -36044,100 +35960,6 @@
  
      /**
       * Subtract two numbers.
- =======
-      * @category Object
-      * @param {Object} object The object to query.
-      * @param {Array|string} path The path to check.
-      * @returns {boolean} Returns `true` if `path` exists, else `false`.
-      * @example
-      *
-      * var object = _.create({ 'a': _.create({ 'b': 2 }) });
-      *
-      * _.hasIn(object, 'a');
-      * // => true
-      *
-      * _.hasIn(object, 'a.b');
-      * // => true
-      *
-      * _.hasIn(object, ['a', 'b']);
-      * // => true
-      *
-      * _.hasIn(object, 'b');
-      * // => false
-      */
-     function hasIn(object, path) {
-       return object != null && hasPath(object, path, baseHasIn);
-     }
- 
-     /**
-      * Creates an object composed of the inverted keys and values of `object`.
-      * If `object` contains duplicate values, subsequent values overwrite
-      * property assignments of previous values.
-      *
-      * @static
-      * @memberOf _
-      * @since 0.7.0
-      * @category Object
-      * @param {Object} object The object to invert.
-      * @returns {Object} Returns the new inverted object.
-      * @example
-      *
-      * var object = { 'a': 1, 'b': 2, 'c': 1 };
-      *
-      * _.invert(object);
-      * // => { '1': 'c', '2': 'b' }
-      */
-     var invert = createInverter(function(result, value, key) {
-       if (value != null &&
-           typeof value.toString != 'function') {
-         value = nativeObjectToString.call(value);
-       }
- 
-       result[value] = key;
-     }, constant(identity));
- 
-     /**
-      * This method is like `_.invert` except that the inverted object is generated
-      * from the results of running each element of `object` thru `iteratee`. The
-      * corresponding inverted value of each inverted key is an array of keys
-      * responsible for generating the inverted value. The iteratee is invoked
-      * with one argument: (value).
-      *
-      * @static
-      * @memberOf _
-      * @since 4.1.0
-      * @category Object
-      * @param {Object} object The object to invert.
-      * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
-      * @returns {Object} Returns the new inverted object.
-      * @example
-      *
-      * var object = { 'a': 1, 'b': 2, 'c': 1 };
-      *
-      * _.invertBy(object);
-      * // => { '1': ['a', 'c'], '2': ['b'] }
-      *
-      * _.invertBy(object, function(value) {
-      *   return 'group' + value;
-      * });
-      * // => { 'group1': ['a', 'c'], 'group2': ['b'] }
-      */
-     var invertBy = createInverter(function(result, value, key) {
-       if (value != null &&
-           typeof value.toString != 'function') {
-         value = nativeObjectToString.call(value);
-       }
- 
-       if (hasOwnProperty.call(result, value)) {
-         result[value].push(key);
-       } else {
-         result[value] = [key];
-       }
-     }, getIteratee);
- 
-     /**
-      * Invokes the method at `path` of `object`.
- >>>>>>> main
       *
       * @static
       * @memberOf _

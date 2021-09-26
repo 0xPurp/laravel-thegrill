@@ -17,23 +17,10 @@ class CreateChefsTable extends Migration
             $table->id();
             $table->string('titre');
             $table->string('sous-titre');
-
-            // Chef 1
-            $table->string('photochef1');
-            $table->string('namechef1');
-
-            // Chef 2
-            $table->string('photochef2');
-            $table->string('namechef2');
-
-            // Chef 3
-            $table->string('photochef3');
-            $table->string('namechef3');
-
-            // Chef 4
-            $table->string('photochef4');
-            $table->string('namechef4');
-
+            $table->string('photo_chef');
+            $table->string('nom_chef');
+            
+            
             $table->timestamps();
         });
     }

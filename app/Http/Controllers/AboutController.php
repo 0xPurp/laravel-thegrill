@@ -14,7 +14,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
+        $about = About::all();
+       return view('backoffice.pages.about.about', compact('about'));
     }
 
     /**

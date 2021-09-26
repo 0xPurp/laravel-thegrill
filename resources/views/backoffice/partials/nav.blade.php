@@ -13,7 +13,7 @@
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">CodingLab</div>
+        <div class="logo_name"><a href="home">Home</a> </div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
@@ -23,46 +23,46 @@
          <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="dashboard">
+        <a href="{{route('dashboard')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="users">
+       <a href="{{route('users.index')}}">
          <i class='bx bx-user' ></i>
          <span class="links_name">User</span>
        </a>
        <span class="tooltip">User</span>
      </li>
      <li>
-       <a href="about">
+       <a href="{{route('about.index')}}">
          <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
+         <span class="links_name">About</span>
        </a>
-       <span class="tooltip">Messages</span>
+       <span class="tooltip">About</span>
      </li>
      <li>
-       <a href="chef">
+       <a href="{{route('chef.index')}}">
          <i class='bx bx-pie-chart-alt-2' ></i>
-         <span class="links_name">Analytics</span>
+         <span class="links_name">Chef</span>
        </a>
-       <span class="tooltip">Analytics</span>
+       <span class="tooltip">Chef</span>
      </li>
      <li>
-       <a href="client">
+       <a href="{{route('client.index')}}">
          <i class='bx bx-folder' ></i>
-         <span class="links_name">File Manager</span>
+         <span class="links_name">Client</span>
        </a>
-       <span class="tooltip">Files</span>
+       <span class="tooltip">Client</span>
      </li>
      <li>
        <a href="header">
          <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Order</span>
+         <span class="links_name">Header</span>
        </a>
-       <span class="tooltip">Order</span>
+       <span class="tooltip">Header</span>
      </li>
      <li>
        <a href="#">
@@ -88,6 +88,21 @@
          </div>
          <i class='bx bx-log-out' id="log_out" ></i>
      </li>
+
+     <li>
+      <a href="#">
+          <form method="POST" class="nav-link py-3 px-0 px-lg-3 rounded" action="{{ route('logout') }}">
+              @csrf
+              <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                  this.closest('form').submit();">
+                  <i class='bx bx-log-out' id="log_out" ></i>
+                  
+              </x-dropdown-link>
+          </form>
+      </a>
+
+      <span class="tooltip">Log Out</span>
+  </li>
     </ul>
   </div>
   
