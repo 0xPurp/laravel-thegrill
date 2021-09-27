@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-
 class MenuSeeder extends Seeder
 {
     /**
@@ -18,7 +17,7 @@ class MenuSeeder extends Seeder
         DB::table('menus')->insert([
             [
                 "titremenu" => "BROWSE THE MENU",
-                "sous-titre" => "your tastebuds will thank you.",
+                "sous_titre" => "your tastebuds will thank you.",
                 "titrerow1" => "FRESH PIZZA",
                 "titreitem1" => "LOREM IPSUM",
                 "prixitem1" => "$8.95",
@@ -36,6 +35,7 @@ class MenuSeeder extends Seeder
                 "titrebigitem1" => "LOREM IPSUM",
                 "prixbigrow1" => "$8.95",
                 "descriptionbigrow1" => "No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.",
+                "titrebigrow2" => "MAIN COURSE",
                 "photoitem2" => "assets/img/food/meal1.jpg",
                 "titrebigitem2" => "LOREM IPSUM",
                 "prixbigrow2" => "$8.95",
@@ -48,7 +48,7 @@ class MenuSeeder extends Seeder
                 "titrebigitem4" => "LOREM IPSUM",
                 "prixbigrow4" => "$8.95",
                 "descriptionbigrow4" => "No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be.",
-                "titrebigrow2" => "MAIN COURSE",
+                
                 "photoitem5" => "assets/img/food/meal5.jpg",
                 "titrebigitem5" => "LOREM IPSUM",
                 "prixbigrow5" => "$8.95",

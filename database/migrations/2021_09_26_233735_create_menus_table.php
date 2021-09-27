@@ -16,7 +16,7 @@ class CreateMenusTable extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('titremenu');
-            $table->string('sous-titre');
+            $table->string('sous_titre');
             
             // Row 1
             $table->string('titrerow1');

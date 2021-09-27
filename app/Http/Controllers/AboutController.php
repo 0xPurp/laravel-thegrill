@@ -58,7 +58,7 @@ class AboutController extends Controller
      */
     public function edit(About $about)
     {
-        //
+        return view('backoffice.pages.about.aboutEdit', compact('about'));
     }
 
     /**
@@ -70,7 +70,38 @@ class AboutController extends Controller
      */
     public function update(Request $request, About $about)
     {
-        //
+        $request->validate([
+            "titre" => "required",
+            "sous_titre" => "required",
+            "titregauche" => "required",
+            "descriptiongauche" => "required",
+            "notesgauche" => "required",
+            "titredroite" => "required",
+            "descriptiondroite" => "required",
+            "notesdroite" => "required",
+            "titrebook" => "required",
+            "descriptionbook" => "required",
+            "titremenu" => "required",
+            "descriptionmenu" => "required",
+           
+        ]);
+
+        $about->titre = $request->titre;
+        $about->sous_titre = $request->sous_titre;
+        $about->titregauche = $request->titregauche;
+        $about->descriptiongauche = $request->descriptiongauche;
+        $about->notesgauche = $request->notesgauche;
+        $about->titredroite = $request->titredroite;
+        $about->descriptiondroite = $request->descriptiondroite;
+        $about->notesdroite = $request->notesdroite;
+        $about->titrebook = $request->titrebook;
+        $about->descriptionbook = $request->descriptionbook;
+        $about->titremenu = $request->titremenu;
+        $about->descriptionmenu =$request->descriptionmenu;
+        
+        $about->save();
+
+        return redirect()->route('about.index')->with('message', 'Information réservations modifiées avec succès');
     }
 
     /**

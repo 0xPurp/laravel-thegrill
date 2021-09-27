@@ -2,7 +2,7 @@
 
 @section('back')
 
-    <section class="container bg-dark rounded text-white py-5">
+    <section class="container bg-dark rounded  py-5">
         <form class="d-flex flex-column w-75" enctype="multipart/form-data" action="{{ route('chef.update', $chef->id) }}" method="post">
             @csrf
             @method('PUT')

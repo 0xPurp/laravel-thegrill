@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-
 class EventsSeeder extends Seeder
 {
     /**
@@ -17,7 +16,7 @@ class EventsSeeder extends Seeder
     {
         DB::table('events')->insert([
             "titreevents" => "OUR UPCOMING EVENTS",
-            "sous-titre" => "try us for yourself today.",
+            "sous_titre" => "try us for yourself today.",
             "event1name" => "STEAK NIGHT",
             "dateevent1" => "TUESDAYS.",
             "titreevent1" => "Every Tuesday we offer the best steaks for all you meat lovers out there.",

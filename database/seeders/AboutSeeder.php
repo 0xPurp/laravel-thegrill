@@ -17,7 +17,7 @@ class AboutSeeder extends Seeder
         DB::table('abouts')->insert([
             [
                 "titre" => "A WARM WELCOME",
-                "sous-titre" => "were very happy to see you.",
+                "sous_titre" => "were very happy to see you.",
                 "titregauche" => "ABOUT DUJOUR",
                 "descriptiongauche" => "Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Love exciting and new. Come aboard were expecting you. Love life's sweetest reward Let it flow it floats back to you.",
                 "notesgauche" => "Here he comes Here comes Speed Racer. He's a demon on wheels. Believe it or not I'm walking on air. I never thought I could feel so free. Flying away on a wing and a prayer.",

@@ -3,6 +3,9 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ChefController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\FooterController;
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -47,9 +50,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-/* Route::get('/user', function () {
-    return view('backoffice.pages.users.users');
-})->middleware(['auth'])->name('users'); */
+
 
 require __DIR__.'/auth.php';
 
@@ -60,3 +61,11 @@ Route::resource('/chef', ChefController::class);
 Route::resource('/client', ClientController::class);
 
 Route::resource('/about', AboutController::class);
+
+Route::resource('/footer', FooterController::class);
+
+Route::resource('/event', EventController::class);
+
+Route::resource('/menu', MenuController::class);
+
+

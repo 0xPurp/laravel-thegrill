@@ -58,25 +58,25 @@
        <span class="tooltip">Client</span>
      </li>
      <li>
-       <a href="header">
+       <a href="{{route('footer.index')}}">
          <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Header</span>
+         <span class="links_name">Footer</span>
        </a>
-       <span class="tooltip">Header</span>
+       <span class="tooltip">Footer</span>
      </li>
      <li>
-       <a href="#">
+       <a href="{{route('event.index')}}">
          <i class='bx bx-heart' ></i>
-         <span class="links_name">Saved</span>
+         <span class="links_name">Event</span>
        </a>
-       <span class="tooltip">Saved</span>
+       <span class="tooltip">Event</span>
      </li>
      <li>
-       <a href="#">
+       <a href="{{route('menu.index')}}">
          <i class='bx bx-cog' ></i>
-         <span class="links_name">Setting</span>
+         <span class="links_name">Menu</span>
        </a>
-       <span class="tooltip">Setting</span>
+       <span class="tooltip">Menu</span>
      </li>
      <li class="profile">
          <div class="profile-details">

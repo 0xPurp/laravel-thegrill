@@ -17,7 +17,7 @@ class FooterSeeder extends Seeder
         DB::table('footers')->insert([
             [
                 "titre" => "BOOK YOUR TABLE",
-                "sous-titre" => "satisfaction, everytime.",
+                "sous_titre" => "satisfaction, everytime.",
                 "titreadress" => "ADDRESS",
                 "nombatiment" => "Florence Building",
                 "adresse" => "Kings Square London, LDN1 23",

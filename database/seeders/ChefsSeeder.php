@@ -15,26 +15,34 @@ class ChefsSeeder extends Seeder
     public function run()
     {
         DB::table('chefs')->insert([
+            
             [
                 "titre" => "OUR ACCLAIMED CHEFS",
                 "sous-titre" => "dedicated to excellence.",
-                "photo_chef" => "assets/img/team/1.jpg",
-                "nom_chef" => "JOHN DOE"],
+                "photo_chef" => "{{asset('assets/img/team/1.jpg')}}",
+                "nom_chef" => "JOHN DOE"
+            ],
                
-                ["titre" => "OUR ACCLAIMED CHEFS",
+            [
+                "titre" => "OUR ACCLAIMED CHEFS",
                 "sous-titre" => "dedicated to excellence.",
-                "photo_chef" => "assets/img/team/2.jpg",
+                "photo_chef" => "{{asset('assets/img/team/2.jpg')}}",
                 "nom_chef" => "BARRY SCOTT"
-                ],
-                ["titre" => "OUR ACCLAIMED CHEFS",
+            ],
+                
+            [
+                "titre" => "OUR ACCLAIMED CHEFS",
                 "sous-titre" => "dedicated to excellence.",
-                "photo_chef" => "assets/img/team/3.jpg",
+                "photo_chef" =>"{{asset('assets/img/team/3.jpg')}}",
                 "nom_chef" => "TOM SMOOTH"
-                ],
-                ["titre" => "OUR ACCLAIMED CHEFS",
+            ],
+                
+            [
+                "titre" => "OUR ACCLAIMED CHEFS",
                 "sous-titre" => "dedicated to excellence.",
-                "photo_chef" => "assets/img/team/4.jpg",
-                "nom_chef" => "HARVEY WALLACE"]
+                "photo_chef" => "{{asset('assets/img/team/4.jpg')}}",
+                "nom_chef" => "HARVEY WALLACE"
+            ]
             
             ]);
     }

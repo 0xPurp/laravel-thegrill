@@ -15,6 +15,13 @@ class Users extends Seeder
      */
     public function run()
     {
-        
+        DB::table('users')->insert([
+            [
+                "name" => "Lil Moulaga",
+                "email" => "0xPurp@nasa.gov",
+                "role_id" => 1,
+                "password" => bcrypt("a")
+            ]
+            ]);
     }
 }
